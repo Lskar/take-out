@@ -72,6 +72,8 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
     }
 
 
+
+
     protected void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
         log.info("开始进行消息转换器配置...");
         //创建消息转换器对象
