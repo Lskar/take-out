@@ -16,8 +16,6 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Method;
 import java.time.LocalDateTime;
 
-import static org.apache.ibatis.ognl.OgnlRuntime.setFieldValue;
-
 @Aspect
 @Component
 @Slf4j

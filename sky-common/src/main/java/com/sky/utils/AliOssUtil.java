@@ -7,7 +7,11 @@ import com.aliyun.oss.OSSException;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.multipart.MultipartFile;
+
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.util.UUID;
 
 @Data
 @AllArgsConstructor
@@ -61,8 +65,23 @@ public class AliOssUtil {
                 .append("/")
                 .append(objectName);
 
-        log.info("文件上传到:{}", stringBuilder.toString());
+
+        log.info("文件上传到:{}", stringBuilder);
+
+
+
 
         return stringBuilder.toString();
     }
+
+    public String getFilePath(MultipartFile file) throws IOException {
+        String originalFilename = file.getOriginalFilename();
+        String suffix = originalFilename.substring(originalFilename.lastIndexOf("."));
+        String objectName = UUID.randomUUID() + suffix;
+        return upload(file.getBytes(),objectName);
+    }
+
+
+
+
 }
