@@ -23,4 +23,6 @@ public interface DishService {
     DishVO getByIdWithFlavors(Long id);
 
     List<Dish> list(Long categoryId);
+
+    List<DishVO> listWithFlavor(Dish dish);
 }

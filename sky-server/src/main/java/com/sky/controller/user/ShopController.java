@@ -25,7 +25,6 @@ public class ShopController {
     private RedisTemplate<String,String> redisTemplate;
 
 
-
     @GetMapping("/status")
     @ApiOperation("获取营业状态")
     public Result<Integer> getStatus(){
