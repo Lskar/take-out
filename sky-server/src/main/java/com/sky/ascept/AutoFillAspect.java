@@ -31,6 +31,15 @@ public class AutoFillAspect {
     }
 
 
+
+
+
+
+
+
+
+
+
     @Before("autoFill()")
     public void doBefore(JoinPoint joinPoint) throws Throwable{
         log.info("开始进行数据填充");
@@ -70,8 +79,6 @@ public class AutoFillAspect {
             setUpdateTime.invoke(object,now);
             setUpdateUser.invoke(object,currentId);
         }
-
-
 
 
     }

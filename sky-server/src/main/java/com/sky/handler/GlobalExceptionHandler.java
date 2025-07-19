@@ -26,9 +26,9 @@ public class GlobalExceptionHandler {
     /**
      * 捕获未知异常
      */
-    @ExceptionHandler
-    public Result<String> unknownExceptionHandler(Exception ex){
-        log.error("异常信息：{}", ex.getMessage());
-        return Result.error(MessageConstant.UNKNOWN_ERROR);
-    }
+//    @ExceptionHandler
+//    public Result<String> unknownExceptionHandler(Exception ex){
+//        log.error("异常信息：{}", ex.getMessage());
+//        return Result.error(MessageConstant.UNKNOWN_ERROR);
+//    }
 }

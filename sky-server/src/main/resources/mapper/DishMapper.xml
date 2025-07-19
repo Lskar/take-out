@@ -46,7 +46,7 @@
 
 
 
-    <update id="updateDish">
+    <update id="updateDish" parameterType="Dish">
         update dish
         <set>
             <if test="name != null">name = #{name},</if>
